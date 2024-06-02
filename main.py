@@ -24,16 +24,13 @@ def count_characters(text):                                     # FUNCTION FOR C
                 character_count[lowered_character] = 1
     return(character_count)
 
-def sort_on(dict):                                              # SORTING FUNCTION
-    return dict["num"]
-
 def report(bookpath,text):                                      # FUNCTION FOR PUBLISHING A REPORT, CONTAINING THE TOTAL NUMBER OF WORDS AND THE NUMBER OF EACH CHARACTER USED, SORTED IN REVERSE
     print(f"--- Begin report of {bookpath} ---")
 
     num_words = get_num_words(text)
     print(f"{num_words} words found in the document")
     character_count = count_characters(text)
-    sorted_characters = sorted(character_count.items(), key=lambda item: item[1], reverse=True)
+    sorted_characters = sorted(character_count.items(), key=lambda item: item[1], reverse=True)         # SORTING LAMBDA FUNCTION
     print("Character frequency (sorted):")
     for character,count in sorted_characters:
         print(f"{character}: {count}")
