@@ -1,9 +1,8 @@
-with open("books/frankenstein.txt") as f:
-    file_contents = f.read()
-
-
 def main():
-    open()
 
+    path_to_file = "/home/andreas/workplace/github.com/Absolution13/Bookbot/books/frankenstein.txt"
+    with open(path_to_file) as f:
+        file_contents = f.read()
 
-main()
+if __name__ == "__main__":
+    main()
